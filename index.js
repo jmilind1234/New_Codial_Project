@@ -6,6 +6,10 @@ const port = 8000;
 
 const app = express();
 
+const homeRouter = require("./routers/index");
+
+app.use("/", homeRouter);
+
 app.listen(port, function(err){
     if(err){
         console.log("Error while starting the server");
