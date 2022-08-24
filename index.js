@@ -1,14 +1,20 @@
 /*Add remote origin*/
+const path = require("path");
 
 const express = require("express");
 
-const port = 8000;
+const port = 5000;
 
 const app = express();
 
 const homeRouter = require("./routers/index");
 
+
 app.use("/", homeRouter);
+
+app.set("view engine","ejs");
+
+app.set("views", path.join(__directory,"/views"));
 
 app.listen(port, function(err){
     if(err){
