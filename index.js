@@ -14,7 +14,7 @@ app.use("/", homeRouter);
 
 app.set("view engine","ejs");
 
-app.set("views", path.join(__directory,"/views"));
+app.set("views", path.join(__dirname,"/views"));
 
 app.listen(port, function(err){
     if(err){
